@@ -9,8 +9,10 @@ def extended_gcd(a, b):
  
 if __name__ == '__main__':
 
-    x=int(input("Enter number1:"))
-    y=int(input("Enter number2"))
-    gcd, x, y = extended_gcd(x, y)
-    print('The GCD is', gcd)
-    print(f'x = {x}, y = {y}')
+    m=int(input("Enter number1:")) #num whose mod to be found
+    y=int(input("Enter number2")) #num whose inv to be found
+    gcd, x, y = extended_gcd(m, y)
+    if gcd!=1:
+        print("Inverse doesn't exists")
+    else:
+        print('The inverse is', y%m)
